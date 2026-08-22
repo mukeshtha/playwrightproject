@@ -1,8 +1,11 @@
 const {test,expect} =require("@playwright/test")
 
+test.use({ viewport: { width: 768, height: 637 } });
 test("Error message test", async function({page}){
 
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+   
 
     await page.getByPlaceholder("Username").type("Admin");
     await page.getByPlaceholder("Password").type("wrongpassword");
