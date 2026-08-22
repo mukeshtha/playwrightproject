@@ -1,5 +1,6 @@
 const {test,expect} =require("@playwright/test")
 
+//manage the browser window size with viewport property in playwright.config.js file or use test.use({ viewport: { width: 768, height: 637 } }); in the test file
 test.use({ viewport: { width: 768, height: 637 } });
 test("Error message test", async function({page}){
 
