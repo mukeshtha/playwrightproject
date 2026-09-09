@@ -21,6 +21,5 @@ await page.waitForTimeout(5000);
 
     await expect(page).toHaveURL(/login/);
     
-     
     await page.screenshot({path: "screenshot.png"});
 })
