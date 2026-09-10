@@ -32,6 +32,7 @@ for(let i=0;i<count;i++)
     }
 
     await page.locator("[routerlink*='cart']").click();
+    await page.locator("div li").first().waitFor();
     const bool=await page.locator("h3:has-text('ZARA COAT 3')").isVisible();
     console.log(bool); 
     expect(bool).toBeTruthy();
